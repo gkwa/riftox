@@ -1,3 +1,8 @@
+#!/usr/bin/env bash
+
+set -u
+set -e
+
 arg_check() {
     if [ -z "$1" ]; then
         echo "Error: Container name parameter is required."
@@ -13,8 +18,6 @@ check_jq_installed() {
 }
 
 get_incus_container() {
-    set -eu
-
     if ! arg_check; then
         return 1
     fi
@@ -24,8 +27,6 @@ get_incus_container() {
 }
 
 delete_incus_container() {
-    set -eu
-
     if ! arg_check; then
         return 1
     fi
