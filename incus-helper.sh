@@ -18,7 +18,7 @@ check_jq_installed() {
 }
 
 get_incus_container() {
-    if ! arg_check; then
+    if ! arg_check $1; then
         return 1
     fi
 
@@ -27,7 +27,7 @@ get_incus_container() {
 }
 
 delete_incus_container() {
-    if ! arg_check; then
+    if ! arg_check $1; then
         return 1
     fi
 
